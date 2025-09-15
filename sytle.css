@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #f2f2f2, #d0e1f9);
+    animation: bgMove 10s infinite alternate;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    100% {background-position: 100% 50%;}    
+}
+
+header {
+    background-color: rgb(95, 123, 159);
+    color: white;
+    padding: 40px 20px;
+    animation: renkDegis 3sn infinite alternate;
+}
+
+@keyframes renkDegis {
+    0% {background-color: #ffffff;}
+    50% {background-color: #ffcc00;}
+    100% {background-color: #ffffff;}    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+img.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid rgb(123, 172, 240);
+    transition: transform 0.3s ease;
+}
+
+img.profile:hover {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 30px 20px;
+}
+
+.kart {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.kart:hover {
+    transform: translateY(-10px);
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #ff6f61, #ff9671, #ff6f61);
+  background-size: 300% 300%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 3s infinite linear;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(-20deg);
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0% { left: -75px; }
+  50% { left: 125%; }
+  100% { left: 125%; }
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: popIn 0.4s ease;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.closeBtn:hover {
+  color: #ff6f61;
+}
+
+/* Form stilleri */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255,111,97,0.5);
+}
+
+.sendBtn {
+  background: linear-gradient(90deg, #ff6f61, #ff9671);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sendBtn:hover {
+  transform: scale(1.05);
+  background: #ff6f61;
+}
+
+/* Açılırken animasyon */
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.listofHobby {
+    list-style-type: square;
+    display: inline-block;
+    text-align: left;
+}
+
+footer {
+    background-color: rgb(95, 123, 159);
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+
